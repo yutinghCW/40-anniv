@@ -1,0 +1,42 @@
+button, a {
+    background-color: transparent;
+    align-self: baseline;
+    @include border-radius(0);
+    @include appearance(none);
+    &:focus {
+        outline: 0;
+    }
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    min-width: 115px;
+    padding: 0.6875em 1em;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
+    // word-break: break-word;
+    overflow: hidden;
+    @include breakpoint(375px) {
+        min-width: 135px;
+    }
+    @include breakpoint(768px) {
+        min-width: 144px;
+        padding: 0.8125em 1em;
+    }
+    &--contained {
+        color: $white;
+        background-color: $surface;
+        border: 1px solid $surface;
+        z-index: 1;
+        &::-moz-focus-inner {
+            border: none;
+        }
+        &:hover,
+        &.active {
+            background-color: $primary-variant;
+            border-color: $primary-variant;
+        }
+    }
+}
