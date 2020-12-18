@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	new WOW().init();
 	var scrol_view_screen_height = $(window).height() / 2,
 		video = document.getElementById("cw40-opening");
 	$(".scroll_fadeIn").each(function () {

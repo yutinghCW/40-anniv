@@ -74,6 +74,9 @@ main {
             display: block;
             padding-left: 0.0625rem;
             letter-spacing: 0.0625rem;
+            opacity: 0;
+            visibility: hidden;
+            animation-fill-mode: both;
         }
     }
     .block--video {
