@@ -11,7 +11,7 @@ $(document).ready(function () {
 	});
 	$(window).scroll(function () {
 		var scroll = $(window).scrollTop();
-		console.log(scroll, $('#cw40-opening').offset().top);
+		// console.log(scroll, $('#cw40-opening').offset().top);
 		if ( (scroll + scrol_view_screen_height) >= $('#cw40-opening').offset().top ) {
 			video.play();
 			// console.log('in');
