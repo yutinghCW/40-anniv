@@ -65,10 +65,13 @@ main {
         padding-top: 50px;
         padding-bottom: 50px;
         p {
+            max-width: 17em;
             width: 100%;
-            max-width: 310px;
             font-size: 1.125rem;
             line-height: 1.7;
+            @media screen and (min-width: 768px) {
+                max-width: 310px;
+            }
         }
         span {
             display: block;
@@ -87,19 +90,58 @@ main {
         .embed {
             &.embed--16by9 {
                 @media screen and (orientation: portrait) {
-                    padding-bottom: 100%;
+                    padding-bottom: 95%;
                 }
             }
             > * {
-                @media screen and (orientation: portrait) {
-                    object-fit: cover;
-                }
+                object-fit: cover;
             }
         }
     }
     .block--button {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+        .col-4 {
+            position: relative;
+            width: 100%;
+            padding: 30px 20px;
+            background-size: cover;
+            background-position: center;
+            @media screen and (min-width: 768px) {
+                width: 33.333333333333%;
+                padding: 50px 40px;
+            }
+            h2 {
+                margin: 0;
+                color: $white;
+            }
+            .h3 {
+                margin: 0;
+                color: $gray-200;
+            }
+            .btn {
+                margin-top: 1em;
+            }
+            &.col-4-green {
+                background-color: $green;
+            }
+            &.col-4-blue {
+                background-color: $blue;
+            }
+            &.col-4-yellow {
+                background-color: $yellow;
+                h2 {
+                    color: $black;
+                }
+                .h3 {
+                    color: $gray-500;
+                }
+            }
+            &.col-4-gray {
+                background-color: $gray;
+            }
+        }
     }
 }
 footer {

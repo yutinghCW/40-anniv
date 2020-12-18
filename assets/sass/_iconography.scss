@@ -13,15 +13,24 @@
         @include transition();
         @include opacity(1);
         @include rotate(0deg);
-        @include transition(background 0.4s);
+        @include transition(all 0.4s);
         +span {
             margin-top: 4px;
         }
     }
-    &:hover,
     &.active {
         span {
+            margin-top: 0;
             background-color: $black;
+            &:nth-child(1) {
+                @include transform(rotate(45deg) translate(1px, 2px));
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                @include transform(rotate(-45deg) translate(0, -1px));
+            }
         }
     }
 }

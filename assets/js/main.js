@@ -2,6 +2,9 @@ $(document).ready(function () {
 	new WOW().init();
 	var scrol_view_screen_height = $(window).height() / 2,
 		video = document.getElementById("cw40-opening");
+	$('.hamburger').click(function () { 
+		$(this).toggleClass('active');
+	});
 	$(".scroll_fadeIn").each(function () {
 		var placement = $(this).get(0).getBoundingClientRect();
 		if ( placement.top + scrol_view_screen_height < window.innerHeight && placement.bottom > 0 ) {

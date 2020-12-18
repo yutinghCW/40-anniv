@@ -1,10 +1,14 @@
 button, a {
     background-color: transparent;
     align-self: baseline;
+    border: 0;
     @include border-radius(0);
     @include appearance(none);
     &:focus {
         outline: 0;
+    }
+    &[disabled] {
+        cursor: not-allowed;
     }
 }
 .btn {
@@ -25,6 +29,9 @@ button, a {
         min-width: 144px;
         padding: 0.8125em 1em;
     }
+    &::-moz-focus-inner {
+        border: none;
+    }
     &--contained {
         color: $white;
         background-color: $surface;
@@ -37,6 +44,67 @@ button, a {
         &.active {
             background-color: $primary-variant;
             border-color: $primary-variant;
+        }
+        &[disabled] {
+            color: $gray-200 !important;
+            background-color: $gray-100 !important;
+        }
+    }
+    &--outlined {
+        border: 1px solid;
+        backdrop-filter: blur(10px);
+        &.btn--white {
+            color: $white;
+            border-color: $white;
+            &[disabled] {
+                color: $gray-200 !important;
+                border-color: $gray-200 !important;
+            }
+        }
+        &.btn--black {
+            color: $black;
+            border-color: $black;
+            &[disabled] {
+                color: $gray-300 !important;
+                border-color: $gray-300 !important;
+            }
+        }
+        &:hover,
+        &.active {
+            color: $gray-100;
+            border-color: $gray-100;
+        }
+    }
+    &.btn--green {
+        color: $black;
+        background-color: $green;
+        &:hover,
+        &.active {
+            background-color: lighten($green, 3%);
+        }
+    }
+    &.btn--blue {
+        color: $white;
+        background-color: $blue;
+        &:hover,
+        &.active {
+            background-color: lighten($blue, 3%);
+        }
+    }
+    &.btn--yellow {
+        color: $black;
+        background-color: $yellow;
+        &:hover,
+        &.active {
+            background-color: lighten($yellow, 3%);
+        }
+    }
+    &.btn--gray {
+        color: $white;
+        background-color: $gray;
+        &:hover,
+        &.active {
+            background-color: lighten($gray, 3%);
         }
     }
 }

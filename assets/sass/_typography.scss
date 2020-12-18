@@ -3,10 +3,8 @@
 //  @return $baseLineHeight * $count;
 // }
 // 標題
-$h-color: $text, $text, $text, $primary, $secondary;
 $h-size: 2rem, 1.375rem, 1.125rem, 1rem, 0.875rem;
 $h-m-size: 1.625rem, 1.25rem;
-$h-lh: 1.5, 1.5, 2, 1.2, 1;
 @for $i from 1 through 5 {
     h#{$i} {
         font-weight: 600;
@@ -18,26 +16,6 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1;
     .h#{$i} {
         margin-top: 1em;
         margin-bottom: 1em;
-        .heading__icon {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 0.9em;
-            vertical-align: middle;
-            &--correct {
-                color: $surface;
-            }
-            &--notice {
-                color: $primary;
-            }
-            &--error {
-                color: $primary;
-            }
-        }
-        .heading__text {
-            display: inline-block;
-            vertical-align: middle;
-            line-height: 1.25;
-        }
     }
 }
 
@@ -54,10 +32,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1;
 @for $i from 3 through 5 {
     h#{$i},
     .h#{$i} {
-        color: nth($h-color, $i);
         font-size: nth($h-size, $i);
-        line-height: nth($h-lh, $i);
-        word-break: break-word;
     }
 }
 
