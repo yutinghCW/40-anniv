@@ -1,3 +1,10 @@
+$story_mastergreen: #9CC815;
+$story_masterblue: #009fb0;
+$story_masteryellow: #ffe100;
+$story_mastergray: #948f8d;
+$story_red: #D60C18;
+$story_orange: #D87411;
+
 $gray-100: #EEEEEE !default;
 $gray-200: #D3D5D7 !default;
 $gray-300: #939EA7 !default; //secondary
@@ -29,7 +36,7 @@ $line: #00C200 !default;
 $rss: #FF5700 !default;
 $mail: $surface !default;
 
-$green: #A2C900;
-$blue: #02ada8;
-$yellow: #f3d54e;
-$gray: #a59c94;
+$green: $story_mastergreen;
+$blue: $story_masterblue;
+$yellow: $story_masteryellow;
+$gray: $story_mastergray;

@@ -60,6 +60,11 @@ button, a {
                 color: $gray-200 !important;
                 border-color: $gray-200 !important;
             }
+            &:hover,
+            &.active {
+                color: $gray-100;
+                border-color: $gray-100;
+            }
         }
         &.btn--black {
             color: $black;
@@ -68,11 +73,11 @@ button, a {
                 color: $gray-300 !important;
                 border-color: $gray-300 !important;
             }
-        }
-        &:hover,
-        &.active {
-            color: $gray-100;
-            border-color: $gray-100;
+            &:hover,
+            &.active {
+                color: $gray-500;
+                border-color: $gray-500;
+            }
         }
     }
     &.btn--green {

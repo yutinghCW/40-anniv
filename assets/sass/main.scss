@@ -7,6 +7,7 @@
 @import "_container";
 @import "_embed";
 @import "_button";
+@import "_preload";
 
 .wow {
     opacity: 0;
@@ -114,6 +115,7 @@ main {
             @media screen and (min-width: 768px) {
                 width: 33.333333333333%;
                 padding: 50px 40px;
+                text-align: center;
             }
             h2 {
                 margin: 0;
@@ -134,15 +136,18 @@ main {
             }
             &.col-4-yellow {
                 background-color: $yellow;
+            }
+            &.col-4-gray {
+                background-color: $gray;
+            }
+            &.col-4-green,
+            &.col-4-yellow {
                 h2 {
                     color: $black;
                 }
                 .h3 {
                     color: $gray-500;
                 }
-            }
-            &.col-4-gray {
-                background-color: $gray;
             }
         }
     }
