@@ -1320,20 +1320,26 @@ header .logo a img {
   display: block;
 }
 
-main {
-  height: 100%;
-  min-height: 100%;
-}
 main .block--essay {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  min-height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  main .block--essay {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .block--essay {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 }
 main .block--essay p {
   max-width: 17em;
