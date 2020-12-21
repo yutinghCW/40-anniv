@@ -6,9 +6,9 @@ $(document).ready(function () {
 		$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
 		$("body").delay(350).css({ overflow: "visible" });
 	});
-	new WOW().init();
 	var scrol_view_screen_height = $(window).height() / 2,
-		video = document.getElementById("cw40-opening");
+		video = document.getElementById("cw40-opening"),
+		videoScroll = 0;
 	$(".hamburger").click(function () {
 		$(this).toggleClass("active");
 	});
@@ -20,15 +20,23 @@ $(document).ready(function () {
 			$(this).removeClass("show");
 		}
 	});
+	$(".kv_pc_mouse").click(function () {
+		if (videoScroll == 0) {
+			new WOW().init();
+		}
+		videoScroll = 1;
+	});
 	$(window).scroll(function () {
 		var scroll = $(window).scrollTop();
 		// console.log(scroll, $('#cw40-opening').offset().top);
-		if ( scroll + scrol_view_screen_height >= $("#cw40-opening").offset().top ) {
-			video.play();
-			// console.log('in');
-		} else {
-			video.pause();
-			// console.log('out');
+		if (scroll > 0) {
+			$(".kv_pc_mouse").fadeOut();
+		}
+		if ( scroll >= $(".block--essay > p").eq(0).offset().top - scrol_view_screen_height * 2 ) {
+			if (videoScroll == 0) {
+				new WOW().init();
+			}
+			videoScroll = 1;
 		}
 	});
 });
