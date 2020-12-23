@@ -109,7 +109,7 @@ main {
         .embed {
             &.embed--16by9 {
                 @media screen and (orientation: portrait) {
-                    padding-bottom: 95%;
+                    padding-bottom: 90%;
                 }
             }
             > * {
@@ -122,6 +122,9 @@ main {
             right: 0;
             background-color: rgba($black, 0.5);
             border-right: 0;
+            @media screen and (max-width: 767px) {
+                min-width: auto;
+            }
             @media (min-aspect-ratio: 16/9) {
                 top: calc(100vh - 150px);
                 bottom: auto;

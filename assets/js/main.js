@@ -90,7 +90,7 @@ $(document).ready(function () {
 		if (
 			scroll >=
 			$(".block--essay > p").eq(0).offset().top -
-				scrol_view_screen_height * 2
+				scrol_view_screen_height
 		) {
 			if (videoScroll == 0) {
 				new WOW().init();

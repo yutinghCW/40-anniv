@@ -1370,7 +1370,7 @@ main .block--video {
 }
 @media screen and (orientation: portrait) {
   main .block--video .embed.embed--16by9 {
-    padding-bottom: 95%;
+    padding-bottom: 90%;
   }
 }
 main .block--video .embed > * {
@@ -1382,6 +1382,11 @@ main .block--video .btn--skip {
   right: 0;
   background-color: rgba(23, 23, 23, 0.5);
   border-right: 0;
+}
+@media screen and (max-width: 767px) {
+  main .block--video .btn--skip {
+    min-width: auto;
+  }
 }
 @media (min-aspect-ratio: 16 / 9) {
   main .block--video .btn--skip {
