@@ -1380,6 +1380,7 @@ main .block--video .btn--skip {
   position: absolute;
   bottom: 50px;
   right: 0;
+  font-size: 0.875rem;
   border-right: 0;
 }
 @media screen and (max-width: 767px) {
