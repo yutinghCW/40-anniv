@@ -263,7 +263,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
 }
 
 button,
@@ -286,9 +285,15 @@ textarea {
 *,
 *::before,
 *::after {
+  outline: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+*:focus,
+*::before:focus,
+*::after:focus {
+  outline: 0;
 }
 
 body {
@@ -1190,7 +1195,7 @@ button[disabled], a[disabled] {
 }
 .btn--outlined {
   border: 1px solid;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
 }
 .btn--outlined.btn--white {
   color: #fff;
@@ -1349,7 +1354,8 @@ main .block--essay p {
 }
 @media screen and (min-width: 768px) {
   main .block--essay p {
-    max-width: 310px;
+    max-width: 375px;
+    font-size: 1.375rem;
   }
 }
 main .block--essay span {
@@ -1369,6 +1375,19 @@ main .block--video {
 }
 main .block--video .embed > * {
   object-fit: cover;
+}
+main .block--video .btn--skip {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background-color: rgba(23, 23, 23, 0.5);
+  border-right: 0;
+}
+@media (min-aspect-ratio: 16 / 9) {
+  main .block--video .btn--skip {
+    top: calc(100vh - 150px);
+    bottom: auto;
+  }
 }
 main .block--button {
   display: flex;

@@ -52,7 +52,7 @@ button, a {
     }
     &--outlined {
         border: 1px solid;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(3px);
         &.btn--white {
             color: $white;
             border-color: $white;

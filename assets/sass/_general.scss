@@ -91,7 +91,6 @@ html {
     -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
 }
 
 button,
@@ -114,7 +113,11 @@ textarea {
 *,
 *::before,
 *::after {
+    outline: 0;
     @include box-sizing(border-box);
+    &:focus {
+        outline: 0;
+    }
 }
 
 body {
