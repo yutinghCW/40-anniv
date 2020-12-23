@@ -1195,7 +1195,6 @@ button[disabled], a[disabled] {
 }
 .btn--outlined {
   border: 1px solid;
-  backdrop-filter: blur(3px);
 }
 .btn--outlined.btn--white {
   color: #fff;
