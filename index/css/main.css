@@ -1325,6 +1325,17 @@ main .block--button .col-4.col-4-green h2, main .block--button .col-4.col-4-yell
 main .block--button .col-4.col-4-green .h3, main .block--button .col-4.col-4-yellow .h3 {
   color: #48545D;
 }
+@media screen and (max-width: 767px) {
+  main .block--button .col-4.order-1 {
+    order: 1;
+  }
+  main .block--button .col-4.order-2 {
+    order: 2;
+  }
+  main .block--button .col-4.order-3 {
+    order: 3;
+  }
+}
 
 footer {
   padding-top: 10px;
