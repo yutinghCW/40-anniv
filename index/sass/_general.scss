@@ -126,12 +126,13 @@ body {
     min-height: 100%;
     // padding-bottom: 40px;
     font-family: 'Noto Serif TC', '思源宋體 TC', '思源宋體 TW', '思源宋體', serif;
+    font-weight: 500;
     @include breakpoint(1024px) {
         // font-weight: 300;
         font-display: swap;
     }
     &.opened {
-        overflow: hidden;
+        overflow: hidden !important;
     }
 }
 
@@ -170,13 +171,13 @@ img {
 }
 
 .desktop {
-    @include breakpoint(max-width 1023px) {
+    @include breakpoint(max-width 768px) {
         display: none;
     }
 }
 
 .mobile {
-    @include breakpoint(1024px) {
+    @include breakpoint(769px) {
         display: none;
     }
 }

@@ -55,6 +55,8 @@ $(document).ready(function () {
 		videoScroll = 0;
 	$(".hamburger").click(function () {
 		$(this).toggleClass("active");
+		$('body').toggleClass("opened");
+		$('nav').toggleClass("opened");
 	});
 	$(".scroll_fadeIn").each(function () {
 		var placement = $(this).get(0).getBoundingClientRect();
