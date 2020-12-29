@@ -61,12 +61,25 @@ main {
 		@media screen and (max-width: 767px) {
 		}
 		.embed {
-            padding-bottom: 56.25%;
+			height: calc(100vh - 70px);
             @media screen and (orientation: portrait) {
+				height: 0;
                 padding-bottom: 90%;
             }
             > * {
 				object-fit: cover;
+				&.cw40-opening-pc {
+					display: block;
+					@media screen and (orientation: portrait) {
+						display: none;
+					}
+				}
+				&.cw40-opening-mb {
+					display: none;
+					@media screen and (orientation: portrait) {
+						display: block;
+					}
+				}
 			}
 		}
 		.btn--skip {

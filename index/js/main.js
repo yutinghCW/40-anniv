@@ -51,7 +51,8 @@ $(document).ready(function () {
 		$("body").delay(350).css({ overflow: "visible" });
 	});
 	var scrol_view_screen_height = $(window).height() / 2,
-		video = document.getElementById("cw40-opening"),
+		videoPc = document.getElementById("cw40-opening-pc"),
+		videoMb = document.getElementById("cw40-opening-mb"),
 		videoScroll = 0;
 	$(".hamburger").click(function () {
 		$(this).toggleClass("active");
@@ -75,7 +76,15 @@ $(document).ready(function () {
 		}
 		videoScroll = 1;
 	});
-	video.onended = function () {
+	videoPc.onended = function () {
+		if (videoScroll == 0) {
+			$("html, body").animate( {
+				scrollTop: $("#essay").offset().top,
+			}, 500);
+		}
+		$(".btn--skip").fadeOut();
+	};
+	videoMb.onended = function () {
 		if (videoScroll == 0) {
 			$("html, body").animate( {
 				scrollTop: $("#essay").offset().top,
